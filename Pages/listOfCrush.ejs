@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KedySon | List Of Crush</title>
+</head>
+<body><br><br>
+   <p style="color: brown;"><b>Congrats <%=me%> &  <%=crush%> have <%= percent%> Of Trust In Your Love</b></p>
+
+
+
+   <h1>See Here Other Couples </h1>
+   <table>
+       <thead>
+           <tr>
+               <th>MyName</th>
+               <th>MyCrush</th>
+               <th>Love Percent</th>
+               <th>ACTION</th>
+           </tr>
+       </thead>
+       
+           <% for (var i= 0; i<data.length; i++){ %> 
+            <tbody>
+            <tr>
+                <td><%= data[i].me %></td>
+                <td><%= data[i].crush %></td>
+                <td><%=data[i].percent%></td>
+                <td><a href="edit/<%=data[i].id %>">Update</a>
+                <a href="delete/<%= data[i].id %>">Delete</a></td>
+            </tr>
+        </tbody>
+            <% } %>
+         
+       
+   </table> 
+</body>
+</html>
